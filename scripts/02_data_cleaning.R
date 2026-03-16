@@ -1,5 +1,5 @@
 library(tidyverse)
-data <- read.csv("data/lung_dataset.csv")
+data <- read.csv("Users/.../lung_dataset.csv")
 
 # Check missing values
 colSums(is.na(data))
@@ -9,4 +9,4 @@ data_clean <- data %>%
   drop_na(time, status)
 
 # Save cleaned dataset
-write.csv(data_clean, "data/lung_clean.csv", row.names = FALSE)
+write.csv(data_clean, "Users/.../lung_clean.csv", row.names = FALSE)
