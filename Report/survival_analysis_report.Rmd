@@ -1,1 +1,40 @@
+---
+Title: "Clinical Survival Analysis of Lung Cancer Patients"
+author: "Linda Zoungrana"
+date: "`r Sys.Date()`"
+output: html_document
+---
 
+# Introduction
+
+This project analyzes survival outcomes in lung cancer patients using clinical data.  
+The goal is to identify factors associated with mortality risk.
+
+# Dataset
+
+The dataset contains clinical variables including:
+
+- survival time
+- patient age
+- sex
+- ECOG performance score
+
+# Load Libraries
+
+```{r}
+library(tidyverse)
+library(survival)
+library(survminer)
+
+
+
+
+
+
+
+Introduction
+Dataset Description
+Methods
+Results
+Discussion
+Conclusion
