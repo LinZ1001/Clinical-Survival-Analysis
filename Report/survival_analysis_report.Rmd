@@ -7,7 +7,15 @@ output: html_document
 
 # Introduction
 
-Lung cancer is one of the leading causes of cancer-related mortality worldwide with about 1.8 million death recorded in 2022. It represent 19% of all global cancer death, with 85% of cases driven by smoking making it the primarily cause. Cases have been reported worlwide with mortality being the highest in Europe, Asia as well as North America. Understanding survival patterns and identifying factors that influence patient outcomes are critical for improving treatment strategies and patient care. This project analyzes a clinical lung cancer dataset to explore survival patterns among patients, with a primary research question as, does patient sex influence survival time in lung cancer patients? The analysis includes data cleaning, exploratory data analysis, and survival modeling using Kaplan–Meier estimation.
+Lung cancer is one of the leading causes of cancer-related mortality worldwide with about 
+1.8 million death recorded in 2022. It represent 19% of all global cancer death, with 85% of
+cases driven by smoking making it the primarily cause. Cases have been reported worlwide with
+mortality being the highest in Europe, Asia as well as North America. Understanding survival
+patterns and identifying factors that influence patient outcomes are critical for improving
+treatment strategies and patient care. This project analyzes a clinical lung cancer dataset
+to explore survival patterns among patients, with a primary research question as, does
+patient sex influence survival time in lung cancer patients? The analysis includes data
+cleaning, exploratory data analysis, and survival modeling using Kaplan–Meier estimation.
 
 # Dataset
 
