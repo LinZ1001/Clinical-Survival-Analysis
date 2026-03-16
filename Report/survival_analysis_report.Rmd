@@ -7,17 +7,22 @@ output: html_document
 
 # Introduction
 
-This project analyzes survival outcomes in lung cancer patients using clinical data.  
-The goal is to identify factors associated with mortality risk.
+Lung cancer is one of the leading causes of cancer-related mortality worldwide with about 1.8 million death recorded in 2022. It represent 19% of all global cancer death, with 85% of cases driven by smoking making it the primarily cause. Cases have been reported worlwide with mortality being the highest in Europe, Asia as well as North America. Understanding survival patterns and identifying factors that influence patient outcomes are critical for improving treatment strategies and patient care. This project analyzes a clinical lung cancer dataset to explore survival patterns among patients, with a primary research question as, does patient sex influence survival time in lung cancer patients? The analysis includes data cleaning, exploratory data analysis, and survival modeling using Kaplan–Meier estimation.
 
 # Dataset
 
-The dataset contains clinical variables including:
+The dataset used in this project comes from the R survival package and contains clinical data for lung cancer patients.
 
-- survival time
-- patient age
-- sex
-- ECOG performance score
+| Variable | Description                              |
+| -------- | ---------------------------------------- |
+| time     | Survival time (days)                     |
+| status   | Survival status (1 = censored, 2 = dead) |
+| age      | Age of patient                           |
+| sex      | Patient sex (1 = male, 2 = female)       |
+| ph.ecog  | ECOG performance score                   |
+| ph.karno | Karnofsky performance score              |
+| wt.loss  | Weight loss                              |
+
 
 # Load Libraries
 
@@ -27,8 +32,98 @@ library(survival)
 library(survminer)
 
 
+3. Data Cleaning
 
+The dataset was processed using the following steps: 
+Missing values were inspected
+Rows with missing survival time were removed
+Survival status was converted to a binary indicator:
+1 = death (event occurred)
+0 = censored observation
+The cleaned dataset was saved for analysis.
 
+4. Exploratory Data Analysis
+Age Distribution
+
+The distribution of patient ages is shown below.
+
+(Insert Age Histogram)
+
+Observation
+
+Most patients fall between 55 and 75 years old, indicating that lung cancer in this dataset primarily affects older adults.
+
+Survival Time Distribution
+
+(Insert Time Histogram)
+
+Observation
+
+Survival times are right-skewed, meaning:
+
+Many patients die within the first 200–400 days
+
+A smaller group survives much longer (up to ~1000 days)
+
+Survival Time by Sex
+
+(Insert Boxplot)
+
+Observation
+
+Female patients tend to show higher median survival times compared to male patients, suggesting potential survival differences between sexes.
+
+5. Survival Analysis
+
+To evaluate survival differences between sexes, a Kaplan–Meier survival analysis was performed.
+
+(Insert Kaplan–Meier Plot)
+
+Interpretation
+
+The Kaplan–Meier curves show a clear separation between male and female survival probabilities.
+
+Key findings:
+
+Female patients demonstrate higher survival probability over time.
+
+Male survival declines faster throughout the follow-up period.
+
+The log-rank test reports:
+
+p = 0.0013
+
+This indicates a statistically significant difference in survival between male and female patients.
+
+6. Discussion
+
+The results suggest that sex is an important factor influencing lung cancer survival in this dataset.
+
+Possible explanations include:
+
+biological differences
+
+treatment response variations
+
+differences in smoking history or disease severity
+
+However, this analysis is limited because it considers only a small number of variables. A more comprehensive model (e.g., Cox proportional hazards regression) would allow adjustment for additional clinical factors such as age, performance score, and weight loss.
+
+7. Conclusion
+
+This study analyzed lung cancer survival data using exploratory analysis and Kaplan–Meier survival estimation.
+
+Key findings include:
+
+Lung cancer patients in this dataset are primarily older adults.
+
+Survival times are highly variable and right-skewed.
+
+Female patients demonstrate significantly better survival outcomes than male patients.
+
+The difference in survival between sexes is statistically significant (p = 0.0013).
+
+These findings highlight the importance of demographic factors in understanding cancer survival outcomes.
 
 
 
